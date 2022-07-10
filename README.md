@@ -56,7 +56,24 @@ Student or learner will use this online bookstore system, users can take a look 
 5.	Application management
     - Favorites
     - Address management
- 
+
+## Web Page Prototype Design
+
+### Home Page
+![index.html](./img/01_index.html.png "Home Page")
+
+### Book Detail Page
+![book_detail.html](./img/02_book_detail.html.png "Book Detail Page")
+
+### Shopping Cart Page
+![cart.html.html](./img/03_cart.html.png "Shopping Cart Page")
+
+### Orders Page
+![orders.html](./img/04_orders.html.png "Orders Page")
+
+VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs.google.com/presentation/d/1uJhvNx98-ONlrOhoG8lj7gNIeNytHrPPOF4XgNWCDcI/edit?usp=sharing "VaniBao Bookstore")
+
+
 
 ---
 Copyright AI_Bao
