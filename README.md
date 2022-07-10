@@ -57,6 +57,13 @@ Student or learner will use this online bookstore system, users can take a look 
     - Favorites
     - Address management
 
+## Project Function Flow Chart
+
+### Login and Register
+![Login and Register](./img/Login%20and%20Register.png "Login and Register")
+
+
+
 ## Web Page Prototype Design
 
 ### Home Page
@@ -66,7 +73,7 @@ Student or learner will use this online bookstore system, users can take a look 
 ![book_detail.html](./img/02_book_detail.html.png "Book Detail Page")
 
 ### Shopping Cart Page
-![cart.html.html](./img/03_cart.html.png "Shopping Cart Page")
+![cart.html](./img/03_cart.html.png "Shopping Cart Page")
 
 ### Orders Page
 ![orders.html](./img/04_orders.html.png "Orders Page")
