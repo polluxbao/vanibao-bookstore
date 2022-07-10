@@ -15,7 +15,7 @@
 		</div>
 
 
-		<p>我们在每天早上 <time>9:00</time> 起床。</p>
+		<p>This is VaniBao Bookstore</p>
 
 
 		<!-- footer section -->
@@ -25,14 +25,11 @@
 	</body>
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript">
-		  // 1: 直接使用load减少明显的卡顿效果 (可以搭配animate 进行优化)  
-			$('#header').load('header.html');
-			$('#footer').load('footer.html');
-			// 2:  $(document).ready(fn) 的方法是当document DOM 结构加载完之后触发的的. 并非是等到页面数据全部渲染完毕之后触发的.    $(document).ready(function() {}) 等价于 $(function(){}), 两者写法不同而已.
+		$('#header').load('header.html');
+		$('#footer').load('footer.html');
 		$(document).ready(function() {
 			$('#header').load('header.html');
 			$('#footer').load('footer.html');
 		})
-		
 	</script>
 </html>
