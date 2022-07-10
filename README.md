@@ -1,6 +1,12 @@
 # VaniBao Bookstore Project Proposal
-  
-## Outline the project VaniBao Bookstore
+
+* [Outline of the project](#outline_the_project)
+* [Project Function Flow Chart](#function_flow)
+* [Project Function Flow Chart](#prototype_design)
+
+<h2 id="outline_the_project"></h2>
+
+## Outline of the project VaniBao Bookstore
 
 **Project name :** Vanibao Bookstore Website
 
@@ -57,6 +63,9 @@ Student or learner will use this online bookstore system, users can take a look 
     - Favorites
     - Address management
 
+
+<h2 id="function_flow"></h2>
+
 ## Project Function Flow Chart
 
 ### Login and Register
@@ -64,19 +73,22 @@ Student or learner will use this online bookstore system, users can take a look 
 
 
 
+
+<h2 id="prototype_design"></h2>
+
 ## Web Page Prototype Design
 
 ### Home Page
-![index.html](./img/01_index.html.png "Home Page")
+![index.html](./img/01index.html.png "Home Page")
 
 ### Book Detail Page
-![book_detail.html](./img/02_book_detail.html.png "Book Detail Page")
+![book_detail.html](./img/02book_detail.html.png "Book Detail Page")
 
 ### Shopping Cart Page
-![cart.html](./img/03_cart.html.png "Shopping Cart Page")
+![cart.html](./img/03cart.html.png "Shopping Cart Page")
 
 ### Orders Page
-![orders.html](./img/04_orders.html.png "Orders Page")
+![orders.html](./img/04orders.html.png "Orders Page")
 
 VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs.google.com/presentation/d/1uJhvNx98-ONlrOhoG8lj7gNIeNytHrPPOF4XgNWCDcI/edit?usp=sharing "VaniBao Bookstore")
 
