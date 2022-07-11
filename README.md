@@ -68,7 +68,7 @@ Student or learner will use this online bookstore system, users can take a look 
 
 ## Project Function Flow Chart
 
-### Login and Register
+### o Login and Register
 ![Login and Register](./img/Login%20and%20Register.png "Login and Register")
 
 
@@ -79,16 +79,16 @@ Student or learner will use this online bookstore system, users can take a look 
 ## Web Page Prototype Design
 
 ### Home Page
-![index.html](./img/01index.html.png "Home Page")
+![index.html](./img/01_index.html.png "Home Page")
 
 ### Book Detail Page
-![book_detail.html](./img/02book_detail.html.png "Book Detail Page")
+![book_detail.html](./img/02_book_detail.html.png "Book Detail Page")
 
 ### Shopping Cart Page
-![cart.html](./img/03cart.html.png "Shopping Cart Page")
+![cart.html](./img/03_cart.html.png "Shopping Cart Page")
 
 ### Orders Page
-![orders.html](./img/04orders.html.png "Orders Page")
+![orders.html](./img/04_orders.html.png "Orders Page")
 
 VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs.google.com/presentation/d/1uJhvNx98-ONlrOhoG8lj7gNIeNytHrPPOF4XgNWCDcI/edit?usp=sharing "VaniBao Bookstore")
 
