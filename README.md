@@ -2,7 +2,7 @@
 
 * [Outline of the project](#outline_the_project)
 * [Project Function Flow Chart](#function_flow)
-* [Project Function Flow Chart](#prototype_design)
+* [Web Page Prototype Design](#prototype_design)
 
 <h2 id="outline_the_project"></h2>
 
