@@ -3,6 +3,10 @@
 * [Outline of the project](#outline_the_project)
 * [Project Function Flow Chart](#function_flow)
 * [Web Page Prototype Design](#prototype_design)
+* [Database Schema Design](#database_design)
+* [Update Record](#update_record)
+
+---
 
 <h2 id="outline_the_project"></h2>
 
@@ -12,7 +16,10 @@
 
 **Development language:** Java Html/Html5 CSS JavaScript
 
-**Development platform:** VS Code Photoshop
+**Development framework:** Bootstrap jQuery
+
+**Development platform:** VS Code / Photoshop
+
 
 **Timeline :**
 
@@ -93,6 +100,18 @@ Student or learner will use this online bookstore system, users can take a look 
 VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs.google.com/presentation/d/1uJhvNx98-ONlrOhoG8lj7gNIeNytHrPPOF4XgNWCDcI/edit?usp=sharing "VaniBao Bookstore")
 
 
+<h2 id="database_design"></h2>
+
+## Database Schema Design
+
+<h2 id="update_record"></h2>
+
+## Update Record
+
+| Version  | Action |   Task             |    Date    |
+|  :---:   |  :---: | :---               |    :---:   |
+| 01.00.00 | Create | Documents          | 2022-07-10 |
+| 01.00.01 | Create | 3 html pages       | 2022-07-10 |
 
 ---
 Copyright AI_Bao
