@@ -104,6 +104,51 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 ## Database Schema Design
 
+- User Table : vb_users
+
+| Field Name   | Type          | Constraint | Description     |
+|  :---        |  :---         | :---:      |    :---         |
+| user_id      | NUMBER        |  Pk        | Primary Key     |
+| login_name   | VARCHAR2(60)  |            | login name      |
+| nick_name    | VARCHAR2(60)  |            | nick name       |
+| grade_id     | NUMBER        |            | member grade ID |
+| password     | VARCHAR2(80)  |  NOT NULL  | password char   |
+| email        | VARCHAR2(80)  |            | email address   |
+| phone        | VARCHAR2(80)  |            | phone number    |
+| head_img     | VARCHAR2(60)  |            | head image      |
+
+- Book Table : vb_books 
+
+| Field Name   | Type          | Constraint | Description     |
+|  :---        |  :---         | :---:      |    :---         |
+| book_id      | NUMBER        |  Pk        | Primary Key     |
+| book_name    | VARCHAR2(60)  |            | book's name     |
+| category_id  | VARCHAR2(60)  |  FK        | category        |
+| keywords     | VARCHAR2(60)  |            | keywords        |
+| auther_id    | NUMBER        |  FK        | auther          |
+| publisher_id | NUMBER        |  FK        | publisher       |
+| language     | VARCHAR2(10)  |            | language        |
+| edtion       | VARCHAR2(10)  |            | edtion          |
+| isbn         | VARCHAR2(30)  |            | ISBN            |
+| book_price   | NUMBER(9.2)   |            | book's price    |
+| book_summary | VARCHAR2(500) |            | summary         |
+| book_descrip | VARCHAR2(900) |            | description     |
+| book_img     | VARCHAR2(60)  |            | book's image    |
+
+- Order Table : vb_orders
+
+- Receive Address Table : vb_receive_addr
+
+- vb_payment
+
+- vb_browse_log
+
+- vb_interest
+
+- vb_category
+
+- vb_user_grade
+
 <h2 id="update_record"></h2>
 
 ## Update Record
@@ -111,7 +156,7 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | Version  | Action |   Task             |    Date    |
 |  :---:   |  :---: | :---               |    :---:   |
 | 01.00.00 | Create | Documents          | 2022-07-10 |
-| 01.00.01 | Create | 3 html pages       | 2022-07-10 |
+| 01.00.01 | Create | 3 html pages       | 2022-07-11 |
 
 ---
 Copyright AI_Bao
