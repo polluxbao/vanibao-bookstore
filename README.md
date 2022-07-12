@@ -5,6 +5,8 @@
 * [Web Page Prototype Design](#prototype_design)
 * [Database Schema Design](#database_design)
 * [Update Record](#update_record)
+* [UI Screen Shot](#ui_screenshot)
+
 
 ---
 
@@ -108,7 +110,7 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 | Field Name   | Type          | Constraint | Description     |
 |  :---        |  :---         | :---:      |    :---         |
-| user_id      | NUMBER        |  Pk        | Primary Key     |
+| user_id      | NUMBER        |  PK        | Primary Key     |
 | login_name   | VARCHAR2(60)  |            | login name      |
 | nick_name    | VARCHAR2(60)  |            | nick name       |
 | grade_id     | NUMBER        |            | member grade ID |
@@ -121,7 +123,7 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 | Field Name   | Type          | Constraint | Description     |
 |  :---        |  :---         | :---:      |    :---         |
-| book_id      | NUMBER        |  Pk        | Primary Key     |
+| book_id      | NUMBER        |  PK        | Primary Key     |
 | book_name    | VARCHAR2(60)  |            | book's name     |
 | category_id  | VARCHAR2(60)  |  FK        | category        |
 | keywords     | VARCHAR2(60)  |            | keywords        |
@@ -148,6 +150,23 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 - vb_category
 
 - vb_user_grade
+
+
+<h2 id="ui_screenshot"></h2>
+
+## UI Screen Shot
+
+- Home Page
+
+![screen01.png](./img/screen_shot/screen01.png "Home Page")
+
+- Book Detail
+
+![screen02.png](./img/screen_shot/screen02.png "Book Detail")
+
+- About Me
+
+![screen02.png](./img/screen_shot/screen03.png "About Me")
 
 <h2 id="update_record"></h2>
 
