@@ -33,7 +33,7 @@
 ### o Purpose 
 **why is it being developed?**
 
-An online bookstore names Vanibao which users can purchase textbooks and reference books
+An online bookstore names VaniBao which users can purchase textbooks and reference books
 
 
 ### o Applicability
@@ -113,7 +113,7 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | user_id      | NUMBER        |  PK        | Primary Key     |
 | login_name   | VARCHAR2(60)  |            | login name      |
 | nick_name    | VARCHAR2(60)  |            | nick name       |
-| grade_id     | NUMBER        |            | member grade ID |
+| grade_id     | NUMBER        |  FK        | member grade ID |
 | password     | VARCHAR2(80)  |  NOT NULL  | password char   |
 | email        | VARCHAR2(80)  |            | email address   |
 | phone        | VARCHAR2(80)  |            | phone number    |
@@ -176,6 +176,7 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 |  :---:   |  :---: | :---               |    :---:   |
 | 01.00.00 | Create | Documents          | 2022-07-10 |
 | 01.00.01 | Create | 3 html pages       | 2022-07-11 |
+|          | Domain | aibao.me           | 2022-07-12 |
 
 ---
 Copyright AI_Bao
