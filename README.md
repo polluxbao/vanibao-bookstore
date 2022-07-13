@@ -10,6 +10,34 @@
 
 ---
 
+**Website preview**
+
+[http://aibao.me/](http://aibao.me/ "VaniBao Bookstore")
+
+**How to use dingding to pierced Intranet**
+
+https://blog.csdn.net/LQM1528490339/article/details/111338131
+
+https://github.com/open-dingtalk/pierced
+
+```
+ding -config ding.cfg -subdomain aibao 8080
+```
+
+http://aibao.vaiwan.com/
+
+ding.cfg
+
+```
+server_addr: "vaiwan.com:443"
+trust_host_root_certs: false
+tunnels:
+  web:
+    subdomain: "aibao"
+    proto:
+      http: 127.0.0.1:8080
+```
+
 <h2 id="outline_the_project"></h2>
 
 ## Outline of the project VaniBao Bookstore
@@ -139,6 +167,8 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 - Order Table : vb_orders
 
+
+
 - Receive Address Table : vb_receive_addr
 
 - vb_payment
@@ -177,6 +207,7 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | 01.00.00 | Create | Documents          | 2022-07-10 |
 | 01.00.01 | Create | 3 html pages       | 2022-07-11 |
 |          | Domain | aibao.me           | 2022-07-12 |
+|          | Create | Database Tables    | 2022-07-13 |
 
 ---
 Copyright AI_Bao
