@@ -19,10 +19,34 @@
         <div class="container">
             <ul class="breadcrumb">
 				<li><a href="./index.html">Home</a></li>
-				<li class="active">Login</li>
+				<li>Login</li>
 			</ul>
         </div>
+ 
 
+		<form name="loginForm" id="loginForm" action="loginAction.php">
+			<h1>Login Bookstore</h1>
+			<p><span>*</span> indicates required information</p>
+		
+			<fieldset id="login">
+				<legend>Login in</legend>
+
+				<label class="labelblock">
+					User Name<span>*</span>
+					<input type="text" id="username"/>
+				</label>
+				<br>
+				<label class="labelblock">
+				&nbsp;Password&nbsp;<span>*</span>
+					<input type="text" id="password"/>
+				</label>
+			</fieldset>
+			<br>
+
+			<input type="reset" value="Reset" />   
+			<input type="submit" value="Login" />
+
+		 </form>
 
         <!-- footer section -->
 		<div id="footer">

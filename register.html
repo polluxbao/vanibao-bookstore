@@ -24,6 +24,64 @@
         </div>
 
 
+		<form name="registerForm" id="registerForm" action="registerAction.php">
+			<h1>Register Bookstore</h1>
+			<p><span>*</span> indicates required information</p>
+		
+			<fieldset id="register">
+				<legend>Register</legend>
+
+				<label class="labelblock">
+					User Name<span>*</span>
+					<input type="text" id="username"/>
+				</label>
+				<br>
+				<label class="labelblock">
+				&nbsp;Password&nbsp;<span>*</span>
+					<input type="text" id="password"/>
+				</label>
+				<br>
+				<label class="labelblock">
+					&nbsp;Re-enter Password&nbsp;<span>*</span>
+						<input type="text" id="password"/>
+				</label>
+				<br>
+				<label class="labelblock">
+					First Name<span>*</span>
+					<input type="text" id="fname"/>
+				</label>
+				<label class="labelblock">
+					Last Name<span>*</span>
+					<input type="text" id="lname"/>
+				</label>
+				<label class="labelblock">
+					Phone<span>*</span>
+					<input type="text" id="phone"/>
+				</label>
+				<label class="labelblock">
+					Street Address<span>*</span>
+					<input type="text" id="sadd"/>
+				</label>
+				<label class="indenlabel">
+					City<span>*</span>
+					<input type="text" id="city" value="St. Peters"/>
+				</label>
+				<label class="indenlabel">
+					State<span>*</span>
+					<input type="text" id="state"
+					value="MO" maxlength="2" />
+				</label>
+				<label class="indenlabel">
+					ZIP<span>*</span>
+					<input type="text" id="zip" maxlength="10"/>
+				</label>
+			</fieldset>
+			<br>
+			<input type="reset" value="Reset" />   
+			<input type="submit" value="Submit" />
+
+		 </form>
+
         <!-- footer section -->
 		<div id="footer">
 		</div>
