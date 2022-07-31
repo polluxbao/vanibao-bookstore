@@ -14,7 +14,18 @@
 
 [http://aibao.me/](http://aibao.me/ "VaniBao Bookstore")
 
-**How to use dingding to pierced Intranet**
+
+**Use Sunny-Ngrok**
+
+https://www.ngrok.cc/_book/
+
+Sunny-Ngrok启动工具.bat
+
+隧道ID: 132429368338
+
+
+**Use open-dingtalk/pierced**
+
 
 https://blog.csdn.net/LQM1528490339/article/details/111338131
 
