@@ -23,6 +23,9 @@ Sunny-Ngrok启动工具.bat
 
 隧道ID: 132429368338
 
+Tunnel Status   online
+Forwarding      http://aibao.free.idcfengye.com -> 127.0.0.1:8080
+Web Interface   127.0.0.1:4040  
 
 **Use open-dingtalk/pierced**
 
