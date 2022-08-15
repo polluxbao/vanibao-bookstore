@@ -251,7 +251,7 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 - Home Page
 
-![Index.html](./images/screen_shot/Index.html.png "Home Page")
+![Index.html](./images/screen_shot/index.html.png "Home Page")
 
 - Book Detail
 
