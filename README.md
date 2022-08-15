@@ -160,6 +160,10 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | email        | VARCHAR2(80)  |            | email address   |
 | phone        | VARCHAR2(80)  |            | phone number    |
 | head_img     | VARCHAR2(60)  |            | head image      |
+| address1_id  | NUMBER        |            | user's address 1|
+| address2_id  | NUMBER        |            | user's address 2|
+| address3_id  | NUMBER        |            | user's address 3|
+
 
 - Book Table : vb_books 
 
@@ -179,7 +183,43 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | book_descrip | VARCHAR2(900) |            | description     |
 | book_img     | VARCHAR2(60)  |            | book's image    |
 
+
+- Address Table : vb_address
+
+| Field Name    | Type          | Constraint | Description     |
+|  :---         |  :---         | :---:      |    :---         |
+| address_id    | NUMBER        |  PK        | Primary Key     |
+| user_id       | NUMBER        |  FK        | user's ID       |
+| full_name     | VARCHAR2(60)  |            | postal name     |
+| addr_street   | VARCHAR2(60)  |            | postal street   |
+| addr_city     | VARCHAR2(20)  |            | postal city     |
+| addr_province | VARCHAR2(20)  |            | postal province |
+| postal_code   | VARCHAR2(10)  |            | postal code     |
+
+
 - Order Table : vb_orders
+
+| Field Name     | Type          | Constraint | Description     |
+|  :---          |  :---         | :---:      |    :---         |
+| order_id       | NUMBER        |  PK        | Primary Key     |
+| order_num      | VARCHAR2(60)  |  NOT NULL  | order number    |
+| order_status   | VARCHAR2(10)  |            | order's status  |
+| create_date    | DATE          |            | create time     |
+| delivery_date  | DATE          |            | delivery time   |
+| order_price    | NUMBER(9,2)   |            | order sum price |
+| user_id        | NUMBER        |  FK        | order user ID   |
+| books_count    | NUMBER        |            | how many books  |
+| address_id     | NUMBER        |  FK        | order address   |
+| customer_name  | VARCHAR2(60)  |            | customer name   |
+| customer_phone | VARCHAR2(60)  |            | customer phone number |
+| customer_email | VARCHAR2(60)  |            | customer email  |
+| logistics_fee  | NUMBER(9,2)   |            | logistics fee   |
+
+- Shopping Cart : vb_shoppingcart
+
+| Field Name    | Type          | Constraint | Description     |
+|  :---         |  :---         | :---:      |    :---         |
+| id            | NUMBER        |  PK        | Primary Key     |
 
 
 

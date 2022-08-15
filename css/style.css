@@ -20,8 +20,10 @@ label.labelblock input {position: relative;}
 #loginForm h1 {color: red;}
 #registerForm h1 {color: red;}
 form span {color:red;}
-.col-sm-5 img {border: 1px solid dimgray;}
+
 #registerForm {width: 800px; padding-left: 20%;}
+
+.col-sm-3 img {border: 1px;}
 
 .news {padding-left: 20%;padding-right: 20%;}
 
