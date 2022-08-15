@@ -70,18 +70,24 @@ tunnels:
 - 2022 July 1	-	Website Architecture Design
 - 2022 July 9	-	Project plan, Screen shots, Web Pages
 - 2022 July 28	-	Final Project Web Site
+- 2022 August 16	-	PHP programming
+- 2022 August 26	-	Dynamic Website final version finish
 
 ---
 ### o Purpose 
 **why is it being developed?**
 
-An online bookstore names VaniBao which users can purchase textbooks and reference books
+An online bookstore names VaniBao which Vanier College students can purchase textbooks and reference books, and users can purchase a variety of paper books, teaching materials, extracurricular interest books, and online e-books. 
+And provide online bookstore management functions.
 
 
 ### o Applicability
 **who will use the system, and how will they benefit?**
 
 Student or learner will use this online bookstore system, users can take a look the books’ cover, publication information of which books online, add to the shopping cart, and choose books to buy.
+
+### o Website Map
+![Website Map](./images/website_map.png "Website Map")
 
 
 ### o Goal
@@ -120,7 +126,10 @@ Student or learner will use this online bookstore system, users can take a look 
 ## Project Function Flow Chart
 
 ### o Login and Register
-![Login and Register](./img/Login%20and%20Register.png "Login and Register")
+![Bookstore Functions](./images/bookstore_function.png "Bookstore Functions")
+
+### o Login and Register
+![Login and Register](./images/login_register.png "Login and Register")
 
 
 
@@ -130,16 +139,16 @@ Student or learner will use this online bookstore system, users can take a look 
 ## Web Page Prototype Design
 
 ### Home Page
-![index.html](./img/01_index.html.png "Home Page")
+![index.html](./images/proto_home_page.png "Home Page")
 
 ### Book Detail Page
-![book_detail.html](./img/02_book_detail.html.png "Book Detail Page")
+![book_detail.html](./images/proto_book_detail_page.png "Book Detail Page")
 
 ### Shopping Cart Page
-![cart.html](./img/03_cart.html.png "Shopping Cart Page")
+![cart.html](./images/proto_shopping_cart_page.png "Shopping Cart Page")
 
 ### Orders Page
-![orders.html](./img/04_orders.html.png "Orders Page")
+![orders.html](./images/proto_order_page.png "Orders Page")
 
 VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs.google.com/presentation/d/1uJhvNx98-ONlrOhoG8lj7gNIeNytHrPPOF4XgNWCDcI/edit?usp=sharing "VaniBao Bookstore")
 
@@ -217,9 +226,9 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 - Shopping Cart : vb_shoppingcart
 
-| Field Name    | Type          | Constraint | Description     |
-|  :---         |  :---         | :---:      |    :---         |
-| id            | NUMBER        |  PK        | Primary Key     |
+| Field Name     | Type          | Constraint | Description     |
+|  :---          |  :---         | :---:      |    :---         |
+| id             | NUMBER        |  PK        | Primary Key     |
 
 
 
@@ -242,15 +251,42 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 - Home Page
 
-![screen01.png](./img/screen_shot/screen01.png "Home Page")
+![Index.html](./images/screen_shot/Index.html.png "Home Page")
 
 - Book Detail
 
-![screen02.png](./img/screen_shot/screen02.png "Book Detail")
+![book_detail.html](./images/screen_shot/book_detail.html.png "Book Detail")
 
 - About Me
 
-![screen02.png](./img/screen_shot/screen03.png "About Me")
+![aboutme.html](./images/screen_shot/aboutme.html.png "About Me")
+
+
+- Login
+
+![login.html](./images/screen_shot/login.html.png "Login")
+
+
+- Register
+
+![register.html](./images/screen_shot/register.html.png "Register")
+
+- News Page
+
+![news.html](./images/screen_shot/news.html.png "News")
+
+
+- Management Home Page
+
+![admin/index.html](./images/screen_shot/admin_index.html.png "Management Index")
+
+- Management Books Page
+
+![admin/admin.html](./images/screen_shot/admin_admin.html.png "Management Books")
+
+- Management Setup Page
+
+![admin/setup.html](./images/screen_shot/admin_setup.html.png "Management Setup")
 
 <h2 id="update_record"></h2>
 
@@ -262,6 +298,8 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | 01.00.01 | Create | 3 html pages       | 2022-07-11 |
 |          | Domain | aibao.me           | 2022-07-12 |
 |          | Create | Database Tables    | 2022-07-13 |
+| 01.01.00 | Create | UI CSS renew       | 2022-07-30 |
+| 01.02.00 | Create | PHP Register/Login | 2022-08-15 |
 
 ---
 Copyright AI_Bao
