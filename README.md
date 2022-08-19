@@ -125,7 +125,7 @@ Student or learner will use this online bookstore system, users can take a look 
 
 ## Project Function Flow Chart
 
-### o Login and Register
+### o Bookstore Functions
 ![Bookstore Functions](./images/bookstore_function.png "Bookstore Functions")
 
 ### o Login and Register
@@ -162,13 +162,12 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | Field Name   | Type          | Constraint | Description     |
 |  :---        |  :---         | :---:      |    :---         |
 | user_id      | NUMBER        |  PK        | Primary Key     |
-| login_name   | VARCHAR2(60)  |            | login name      |
-| nick_name    | VARCHAR2(60)  |            | nick name       |
-| grade_id     | NUMBER        |  FK        | member grade ID |
-| password     | VARCHAR2(80)  |  NOT NULL  | password char   |
-| email        | VARCHAR2(80)  |            | email address   |
-| phone        | VARCHAR2(80)  |            | phone number    |
-| head_img     | VARCHAR2(60)  |            | head image      |
+| user_name    | VARCHAR(60)  |            | login name      |
+| full_name    | VARCHAR(60)  |            | nick name       |
+| password     | VARCHAR(80)  |  NOT NULL  | password char   |
+| email        | VARCHAR(80)  |            | email address   |
+| phone        | VARCHAR(80)  |            | phone number    |
+| head_img     | VARCHAR(60)  |            | head image      |
 | address1_id  | NUMBER        |            | user's address 1|
 | address2_id  | NUMBER        |            | user's address 2|
 | address3_id  | NUMBER        |            | user's address 3|
@@ -176,63 +175,75 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 - Book Table : vb_books 
 
-| Field Name   | Type          | Constraint | Description     |
-|  :---        |  :---         | :---:      |    :---         |
-| book_id      | NUMBER        |  PK        | Primary Key     |
-| book_name    | VARCHAR2(60)  |            | book's name     |
-| category_id  | VARCHAR2(60)  |  FK        | category        |
-| keywords     | VARCHAR2(60)  |            | keywords        |
-| auther_id    | NUMBER        |  FK        | auther          |
-| publisher_id | NUMBER        |  FK        | publisher       |
-| language     | VARCHAR2(10)  |            | language        |
-| edtion       | VARCHAR2(10)  |            | edtion          |
-| isbn         | VARCHAR2(30)  |            | ISBN            |
-| book_price   | NUMBER(9.2)   |            | book's price    |
-| book_summary | VARCHAR2(500) |            | summary         |
-| book_descrip | VARCHAR2(900) |            | description     |
-| book_img     | VARCHAR2(60)  |            | book's image    |
+| Field Name     | Type         | Constraint | Description     |
+|  :---          |  :---        | :---:      |    :---         |
+| book_id        | NUMBER       |  PK        | Primary Key     |
+| book_name      | VARCHAR(60)  |            | book's name     |
+| category_id    | VARCHAR(60)  |  FK        | category        |
+| keywords       | VARCHAR(60)  |            | keywords        |
+| auther_id      | NUMBER       |  FK        | auther          |
+| publisher_id   | NUMBER       |  FK        | publisher       |
+| language       | VARCHAR(10)  |            | language        |
+| edtion         | VARCHAR(10)  |            | edtion          |
+| isbn           | VARCHAR(30)  |            | ISBN            |
+| book_price     | NUMBER(9.2)  |            | book's price    |
+| book_summary   | VARCHAR(500) |            | summary         |
+| book_descrip   | VARCHAR(900) |            | description     |
+| book_img       | VARCHAR(60)  |            | book's image    |
 
 
 - Address Table : vb_address
 
-| Field Name    | Type          | Constraint | Description     |
-|  :---         |  :---         | :---:      |    :---         |
-| address_id    | NUMBER        |  PK        | Primary Key     |
-| user_id       | NUMBER        |  FK        | user's ID       |
-| full_name     | VARCHAR2(60)  |            | postal name     |
-| addr_street   | VARCHAR2(60)  |            | postal street   |
-| addr_city     | VARCHAR2(20)  |            | postal city     |
-| addr_province | VARCHAR2(20)  |            | postal province |
-| postal_code   | VARCHAR2(10)  |            | postal code     |
+| Field Name     | Type         | Constraint | Description     |
+|  :---          |  :---        | :---:      |    :---         |
+| address_id     | NUMBER       |  PK        | Primary Key     |
+| user_id        | NUMBER       |  FK        | user's ID       |
+| full_name      | VARCHAR(60)  |            | postal name     |
+| addr_street    | VARCHAR(60)  |            | postal street   |
+| addr_city      | VARCHAR(20)  |            | postal city     |
+| addr_province  | VARCHAR(20)  |            | postal province |
+| postal_code    | VARCHAR(10)  |            | postal code     |
 
 
 - Order Table : vb_orders
 
-| Field Name     | Type          | Constraint | Description     |
-|  :---          |  :---         | :---:      |    :---         |
-| order_id       | NUMBER        |  PK        | Primary Key     |
-| order_num      | VARCHAR2(60)  |  NOT NULL  | order number    |
-| order_status   | VARCHAR2(10)  |            | order's status  |
-| create_date    | DATE          |            | create time     |
-| delivery_date  | DATE          |            | delivery time   |
-| order_price    | NUMBER(9,2)   |            | order sum price |
-| user_id        | NUMBER        |  FK        | order user ID   |
-| books_count    | NUMBER        |            | how many books  |
-| address_id     | NUMBER        |  FK        | order address   |
-| customer_name  | VARCHAR2(60)  |            | customer name   |
-| customer_phone | VARCHAR2(60)  |            | customer phone number |
-| customer_email | VARCHAR2(60)  |            | customer email  |
-| logistics_fee  | NUMBER(9,2)   |            | logistics fee   |
+| Field Name     | Type         | Constraint | Description     |
+|  :---          |  :---        | :---:      |    :---         |
+| order_id       | NUMBER       |  PK        | Primary Key     |
+| order_num      | VARCHAR(60)  |  NOT NULL  | order number    |
+| order_status   | VARCHAR(10)  |            | order's status  |
+| create_date    | DATE         |            | create time     |
+| delivery_date  | DATE         |            | delivery time   |
+| order_price    | NUMBER(9,2)  |            | order sum price |
+| user_id        | NUMBER       |  FK        | order user ID   |
+| books_count    | NUMBER       |            | how many books  |
+| address_id     | NUMBER       |  FK        | order address   |
+| customer_name  | VARCHAR(60)  |            | customer name   |
+| customer_phone | VARCHAR(60)  |            | customer phone number |
+| customer_email | VARCHAR(60)  |            | customer email  |
+| logistics_fee  | NUMBER(9,2)  |            | logistics fee   |
 
 - Shopping Cart : vb_shoppingcart
 
 | Field Name     | Type          | Constraint | Description     |
 |  :---          |  :---         | :---:      |    :---         |
 | id             | NUMBER        |  PK        | Primary Key     |
-
-
+| order_num      | VARCHAR(60)   |  FK        | order number    |
+| user_id        | NUMBER        |  FK        | user's ID       |
+| book_id        | NUMBER        |  FK        | book's ID       |
+| book_count     | NUMBER        |            | how many books  |
+| instock        | BOOLEAN       |            | available or not|
 
 - Receive Address Table : vb_receive_addr
+
+| Field Name     | Type          | Constraint | Description        |
+|  :---          |  :---         | :---:      |    :---            |
+| addr_id        | NUMBER        |  PK        | Primary Key        |
+| rec_name       | VARCHAR(60)   |            | Recipient name     |
+| rec_address    | VARCHAR(80)   |            | Recipient address  |
+| rec_province   | VARCHAR(10)   |            | Recipient province |
+| rec_post       | VARCHAR(10)   |            | Recipient post code|
+
 
 - vb_payment
 
@@ -243,6 +254,14 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 - vb_category
 
 - vb_user_grade
+
+- vb_news
+
+| Field Name     | Type          | Constraint | Description     |
+|  :---          |  :---         | :---:      |    :---         |
+| news_id        | NUMBER        |  PK        | Primary Key     |
+| news_title     | VARCHAR(200) |            | news title      |
+| news_title     | VARCHAR(200) |            | news title      |
 
 
 <h2 id="ui_screenshot"></h2>
