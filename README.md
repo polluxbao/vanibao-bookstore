@@ -248,7 +248,7 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | book_price     | DOUBLE(9,2)  |            | book price      |
 | instock        | BOOLEAN      |            | available or not|
 
-- vb_browse_log
+- Users' browse log vb_browse_log
 
 | Field Name     | Type         | Constraint | Description     |
 |  :---          |  :---        | :---:      |    :---         |
