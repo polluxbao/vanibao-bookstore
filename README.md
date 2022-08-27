@@ -225,12 +225,16 @@ class Connection{
 
 
 ### class Signup extends Connection
+
+```
 class Signup extends Connection {  
     public function tosignup($username, $password, $confirmpassword, $email, $firstname, $lastname, $address) {}  
-}  
-
+}
+```
 
 ### class Login extends Connection
+
+```
 class Login extends Connection {  
     public $id;  
 
@@ -238,15 +242,19 @@ class Login extends Connection {
 
     public function idUser() {}  
 }  
-
+```
 
 ### class Select extends Connection
+
+```
 class Select extends Connection {  
     public function selectUserById($id) {}  
 }  
- 
+```
 
 ### class ShoppingCart extends Connection
+
+```
 class ShoppingCart extends Connection {  
     public function query() {}  
   
@@ -254,15 +262,19 @@ class ShoppingCart extends Connection {
   
     public function get($result) {}  
 }  
-
+```
 
 ### class Book extends Connection
+
+```
 class Book extends Connection {  
     public function get($book_id) {}  
 }  
-
+```
 
 ### class Search extends Connection
+
+```
 class Search extends Connection {  
     private $result;  
     public $rowsnum;  
@@ -271,7 +283,7 @@ class Search extends Connection {
   
     public function get() {}  
 }  
-
+```
 
 
 
