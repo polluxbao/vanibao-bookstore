@@ -301,29 +301,43 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 - Home Page
 
-![Index.html](./images/screen_shot/index.html.png "Home Page")
+![index.php](./images/screen_shot/index.php.png "Home Page")
+
+- Home Page
+
+![index.php](./images/screen_shot/index_menu.php.png "Menu Bar")
+
 
 - Book Detail
 
-![book_detail.html](./images/screen_shot/book_detail.html.png "Book Detail")
+![book_detail.php](./images/screen_shot/book_detail.php.png "Book Detail")
 
-- About Me
+- Sign Up
 
-![aboutme.html](./images/screen_shot/aboutme.html.png "About Me")
-
+![signup.php](./images/screen_shot/signup.php.png "Sign Up")
 
 - Login
 
-![login.html](./images/screen_shot/login.html.png "Login")
+![login.php](./images/screen_shot/login.php.png "Login")
+
+- Shopping Cart
+
+![shoppingcart_full.php](./images/screen_shot/shoppingcart_full.png "Shopping Cart")
+
+- Shopping Cart Empty
+
+![shoppingcart_empty.php](./images/screen_shot/shoppingcart_empty.png "Shopping Cart")
 
 
-- Register
+- About Me
 
-![register.html](./images/screen_shot/register.html.png "Register")
+![aboutme.php](./images/screen_shot/aboutme.php.png "About Me")
+
+
 
 - News Page
 
-![news.html](./images/screen_shot/news.html.png "News")
+![news.php](./images/screen_shot/news.php.png "News")
 
 
 - Management Home Page

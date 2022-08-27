@@ -43,7 +43,7 @@ INSERT INTO vb_users VALUES
 CREATE TABLE vb_category (
     id INT(9) PRIMARY KEY AUTO_INCREMENT,
     class INT(9),
-    baseid INT(9),
+    base_id INT(9),
     category VARCHAR(30));
 
 INSERT INTO vb_category VALUES (1, 1, 0, "Computer");
@@ -70,6 +70,8 @@ INSERT INTO vb_auther VALUES (1, "Donald Knuth", "Donald Ervin Knuth is an Ameri
 INSERT INTO vb_auther VALUES (2, "Alan Turing", "Alan Mathison Turing OBE FRS was an English mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist.");
 
 INSERT INTO vb_auther VALUES (3, "Joan Clarke", "Joan Elisabeth Lowther Murray, MBE was an English cryptanalyst and numismatist best known for her work as a code-breaker at Bletchley Park");
+
+
 
 CREATE TABLE vb_publisher (
     id INT(9) PRIMARY KEY AUTO_INCREMENT,
@@ -105,11 +107,14 @@ CREATE TABLE vb_books (
 
 INSERT INTO vb_books VALUES (1, "Data Structures IV Edition", 1, 5, "Computer", 1, 1, "English", "IV", "1912883619", 13.99, "data structure", "A data structure is a particular way of organizing data in a computer so that it can be used effectively. For example, we can store a list of items having the same data-type using the array data structure.", "computer_01.jpg", "computer_02.jpg", "computer_03.jpg", "computer_04.jpg");
 
-INSERT INTO vb_books VALUES (2, "Coding Interview", 1, 5, "Computer", 1, 1, "English", "IV", "1912883619", 13.99, "data structure", "A data structure is a particular way of organizing data in a computer so that it can be used effectively. For example, we can store a list of items having the same data-type using the array data structure.", "computer_11.jpg", "computer_12.jpg", "computer_13.jpg", "computer_14.jpg");
+INSERT INTO vb_books VALUES (2, "Coding Interview", 1, 6, "Computer", 1, 1, "English", "IV", "1912883619", 13.99, "data structure", "A data structure is a particular way of organizing data in a computer so that it can be used effectively. For example, we can store a list of items having the same data-type using the array data structure.", "computer_11.jpg", "computer_12.jpg", "computer_13.jpg", "computer_14.jpg");
 
 INSERT INTO vb_books VALUES (3, "Python Algorithm", 1, 5, "Computer", 1, 1, "English", "IV", "1912883619", 13.99, "data structure", "A data structure is a particular way of organizing data in a computer so that it can be used effectively. For example, we can store a list of items having the same data-type using the array data structure.", "computer_21.jpg", "computer_22.jpg", "computer_23.jpg", "computer_24.jpg");
 
-INSERT INTO vb_books VALUES (4, "Python Interview", 1, 5, "Computer", 1, 1, "English", "IV", "1912883619", 13.99, "data structure", "A data structure is a particular way of organizing data in a computer so that it can be used effectively. For example, we can store a list of items having the same data-type using the array data structure.", "computer_31.jpg", "computer_32.jpg", "computer_33.jpg", "computer_34.jpg");
+INSERT INTO vb_books VALUES (4, "Python Interview", 1, 7, "Computer", 1, 1, "English", "IV", "1912883619", 13.99, "data structure", "A data structure is a particular way of organizing data in a computer so that it can be used effectively. For example, we can store a list of items having the same data-type using the array data structure.", "computer_31.jpg", "computer_32.jpg", "computer_33.jpg", "computer_34.jpg");
+
+INSERT INTO vb_books VALUES (5, "Mathematics for Machine Learning", 2, 11, "Computer", 1, 1, "English", "IV", "1912883619", 13.99, "data structure", "A data structure is a particular way of organizing data in a computer so that it can be used effectively. For example, we can store a list of items having the same data-type using the array data structure.", "math_01.jpg", "math_02.jpg", "math_03.jpg", "math_04.jpg");
+
 
 CREATE TABLE vb_orders (
     order_id INT(9) PRIMARY KEY AUTO_INCREMENT,

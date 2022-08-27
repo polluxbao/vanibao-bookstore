@@ -1,4 +1,5 @@
 <?php
+$page_title = "About Me";
 include_once "header.php";
 ?>
 

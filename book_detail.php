@@ -18,8 +18,10 @@ if(!$result) {
 <div class="container">
     <ul class="breadcrumb">
         <li><a href="index.php">Home</a></li>
-        <li><a href="#">Computer</a></li>
-        <li class="active">Data Structures</li>
+        <?php
+        echo '<li><a href="#">'.$result["category1"].'</a></li>';
+        echo '<li class="active">'.$result["category2"].'</li>';
+        ?>
     </ul>
 </div>
 
@@ -108,41 +110,41 @@ if(!$result) {
     </div>
     <div class="row">
         <div class="col-sm-3 text-center">
-            <a href="./book_detail.html">
+            <a href="book_detail.php?id=4">
                 <img src="./img/book-1.png" alt="Books" title="This is a good book">
             </a>
             <p>
-                <a href="./book_detail.html">Book’s Name</a> <br>
+                <a href="book_detail.php?id=4">Book’s Name</a> <br>
                 <a href="#">Author</a> <br>
                 <a style="color:brown">$ 13.99</a>
             </p>
         </div>
         <div class="col-sm-3 text-center">
-            <a href="./book_detail.html">
+            <a href="book_detail.php?id=1">
                 <img src="./img/book-2.png" alt="Books" title="This is a good book">
             </a>
             <p>
-                <a href="./book_detail.html">Book’s Name</a> <br>
+                <a href="book_detail.php?id=1">Book’s Name</a> <br>
                 <a href="#">Author</a> <br>
                 <a style="color:brown">$ 13.99</a>
             </p>
         </div>
         <div class="col-sm-3 text-center">
-            <a href="./book_detail.html">
+            <a href="book_detail.php?id=2">
                 <img src="./img/book-3.png" alt="Books" title="This is a good book">
             </a>
             <p>
-                <a href="./book_detail.html">Book’s Name</a> <br>
+                <a href="book_detail.php?id=2">Book’s Name</a> <br>
                 <a href="#">Author</a> <br>
                 <a style="color:brown">$ 13.99</a>
             </p>
         </div>
         <div class="col-sm-3 text-center">
-            <a href="./book_detail.html">
+            <a href="book_detail.php?id=3">
                 <img src="./img/book-4.png" alt="Books" title="This is a good book">
             </a>
             <p>
-                <a href="./book_detail.html">Book’s Name</a> <br>
+                <a href="book_detail.php?id=3">Book’s Name</a> <br>
                 <a href="#">Author</a> <br>
                 <a style="color:brown">$ 13.99</a>
             </p>
@@ -154,10 +156,13 @@ if(!$result) {
 <div class="container">
 <div>
     <h5>Book Details</h5>
-    <li>Publisher : Milestone Memories Press</li>
-    <li>Language : English</li>
+    <?php
+    echo '<li>Publisher : '.$result["publisher"].'</li>';
+    echo '<li>Language : '.$result["language"].'</li>';
+    echo '<li>ISBN-10 : '.$result["isbn"].'</li>';
+    ?>
+    
     <li>Paperback : 111 pages</li>
-    <li>ISBN-10 : 1912883619</li>
     <li>Item weight : 150 g</li>
     <li>Dimensions : 13.97 x 0.71 x 21.59 cm</li>
 </div>
