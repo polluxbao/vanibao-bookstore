@@ -43,6 +43,31 @@
                 </li>
             </ul>
         </div>
+
+        <!-- <form action='' method='post'>
+            Search<input type='text' name='text'>
+            <input type='submit' value='search',name='search'>
+        </form> -->
+
+
+        <form class="search" method='post'>
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button class="btn btn-default btn-sm" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+                <input type="input" class="form-control input-sm" name="search" placeholder="Search">
+            </div>
+        </form>
+
+        <?php
+        if(!empty($_POST['search'])){
+            header("location:search.php?search=".$_POST['search']);
+            // echo $_POST['search'];
+        }
+        ?>
+
         <div class="login">
             <?php
             if(!empty($_SESSION["id"])) {

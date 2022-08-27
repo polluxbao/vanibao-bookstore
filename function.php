@@ -165,3 +165,36 @@ class Book extends Connection {
 
   }
 }
+
+
+class Search extends Connection {
+  private $result;
+  public $rowsnum;
+  public function query($keyword) {
+    $this->result = mysqli_query($this->conn, "SELECT * FROM vb_books WHERE book_name LIKE '%$keyword%' OR keywords LIKE '%$keyword%'");
+    $this->rowsnum = mysqli_num_rows($this->result);
+  }
+
+  public function get() {
+    // echo "get".mysqli_num_rows($result);
+    if(($this->result > 0) && ($books = mysqli_fetch_assoc($this->result))) {
+      $book_id = $books["book_id"];
+      $name = $books["book_name"];
+      $img = $books["book_img1"];
+      $keywords = $books["keywords"];
+      $price = $books["book_price"];
+      $summary = $books["summary"];
+      $descrip = $books["book_descrip"];
+      $row = array("id" => $book_id,
+                  "name" => $name, 
+                  "img" => $img, 
+                  "keywords" => $keywords, 
+                  "price" => $price,
+                  "summary" => $summary,
+                  "descrip" => $descrip);
+      return $row;
+    } else {
+      return false;
+    }
+  }
+}

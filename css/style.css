@@ -26,6 +26,10 @@ header .login p:hover {color:yellow}
 header .cart {position: absolute; right: 50px; top:30px; }
 header .cart img {height: 36px;}
 
+header .search {position: absolute; 
+              width: 200px;
+              right: 150px; top:35px;}
+
 label.labelblock input {position: relative;}
 #username, #password {width: 15em;}
 #loginForm {padding-left: 20%;padding-right: 20%;}

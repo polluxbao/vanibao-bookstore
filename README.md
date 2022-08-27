@@ -56,16 +56,22 @@ tunnels:
 
 ## Outline of the project VaniBao Bookstore
 
-**Project name :** Vanibao Bookstore Website
+**Project name :** VaniBao Bookstore Website
 
-**Development language:** Java Html/Html5 CSS JavaScript
+**Author :** Qingjun Bao
 
-**Development framework:** Bootstrap jQuery
+**Last Update Date :** 2022-08-27
 
-**Development platform:** VS Code / Photoshop
+**Development language :** Html/Html5 CSS PHP
+
+**Development framework :** Bootstrap
+
+**Database :** MySQLi
+
+**Development IDE :** VS Code
 
 
-**Timeline :**
+**Timeline**
 
 - 2022 July 1	-	Website Architecture Design
 - 2022 July 9	-	Project plan, Screen shots, Web Pages
@@ -74,11 +80,58 @@ tunnels:
 - 2022 August 26	-	Dynamic Website final version finish
 
 ---
+
+### Website Development Features
+
+1. PHP Language Object-Oriented programming thinking
+
+1. Slideshow ads images on homepage
+
+1. Use CSS statements "hover display: none; " to achieve drop down menu
+
+1. Use "include" statement to achieve independent header footer
+
+1. Use "SESSION" transfer parameters between pages
+
+1. Use "<title>$page_title</title>" generate dynamic web page title.
+
+1. Automatically identify whom Log in is administrator or not, then display the management entry
+
+1. Automatically identify Shopping Cart empty or not, then display the different icon
+
+1. Specific user's shopping cart with the query function
+
+1. To generate dynamic breadcrumbs depending on book categories.
+
+1. Determine the validity of the username and whether it is duplicated during Sign Up
+
+1. Display user’s name after logged in.
+
+1. Transfer parameters through "url?id=", then query data from database to display dynamic book_detail.php page
+
+1. Determine whether the shopping cart is empty or not, dynamically display the “empty cart” image or shopping list details
+
+1. Automatically calculate the total price of books with GST and QST taxes
+
+1. Keyword search function, return approximate string matching result or no result
+
+1. Embed Google Maps
+
+1. Pushed on github
+
+
+---
+
 ### o Purpose 
 **why is it being developed?**
 
-An online bookstore names VaniBao which Vanier College students can purchase textbooks and reference books, and users can purchase a variety of paper books, teaching materials, extracurricular interest books, and online e-books. 
-And provide online bookstore management functions.
+Create an online bookstore where readers and Vanier College students can purchase a variety of paper books, teaching materials, extracurricular interest books, and online e-books. 
+
+Home page has menu bar navigation and arrange layout below with slideshow ads images, news bulletin board, hot book and sub-categories book list.
+
+Registration and Login, Shopping Cart and Ordering functions.
+
+Also provide online bookstore management functions.
 
 
 ### o Applicability
@@ -100,8 +153,8 @@ Student or learner will use this online bookstore system, users can take a look 
     - Books Search
 
 2.	User Management
-    - Log in
-    - register
+    - Login
+    - Sign up
     - change Password
     - Modify Personal Information
 
@@ -155,6 +208,16 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 <h2 id="database_design"></h2>
 
+## Database Design Purpose
+
+**vb_users** is the user table, who browser log records in **vb_browse_log** table, **vb_orders** references user’s id from **vb_users** and address id from **vb_address** so that one user could have up to 3 addresses, **vb_order_book** table builds relationship between **vb_orders** and **vb_books** with **order_id** from **vb_orders** and **book_id** from **vb_books**. Then **vb_books** table store all the detail of books which references from **vb_category**, **vb_auther** and **vb_publisher**.
+
+## Database Tables Imported in phpMyAdmin
+![phpMyAdmin](./images/database_phpMyAdmin.png "Database Tables phpMyAdmin")
+
+## Database ER Diagram
+![ER Diagram](./images/database_ER.png "Database ER Diagram")
+
 ## Database Schema Design
 
 - User Table : vb_users
@@ -163,14 +226,14 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 |  :---        |  :---         | :---:      |    :---         |
 | user_id      | INT           |  PK        | Primary Key     |
 | user_name    | VARCHAR(60)   |            | login name      |
-| full_name    | VARCHAR(60)   |            | nick name       |
 | password     | VARCHAR(80)   |  NOT NULL  | password char   |
-| email        | VARCHAR(80)   |            | email address   |
-| phone        | VARCHAR(20)   |            | phone number    |
-| head_img     | VARCHAR(60)   |            | head image      |
+| email        | VARCHAR(80)   |            | email           |
+| first_name   | VARCHAR(60)   |            | first name      |
+| last_name    | VARCHAR(60)   |            | last name       |
 | address1_id  | INT           |            | user's address 1|
 | address2_id  | INT           |            | user's address 2|
 | address3_id  | INT           |            | user's address 3|
+| head_img     | VARCHAR(60)   |            | head image      |
 
 
 - Book Table : vb_books 
@@ -198,7 +261,8 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 |  :---          |  :---        | :---:      |    :---         |
 | address_id     | INT          |  PK        | Primary Key     |
 | user_id        | INT          |  FK        | user's ID       |
-| full_name      | VARCHAR(60)  |            | postal name     |
+| first_name     | VARCHAR(60)  |            | first name      |
+| last_name      | VARCHAR(60)  |            | last name       |
 | phone          | VARCHAR(20)  |            | phone number    |
 | addr_street    | VARCHAR(60)  |            | postal street   |
 | addr_city      | VARCHAR(20)  |            | postal city     |
@@ -295,6 +359,114 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | news_content   | VARCHAR(200)  |            | news title      |
 
 
+## Database SQL Statements
+
+```
+CREATE TABLE vb_users (
+    user_id INT(9) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    user_name VARCHAR(30),
+    password VARCHAR(30),
+    email VARCHAR(30),
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    address VARCHAR(90),
+    head_img VARCHAR(60));
+
+CREATE TABLE vb_category (
+    id INT(9) PRIMARY KEY AUTO_INCREMENT,
+    class INT(9),
+    base_id INT(9),
+    category VARCHAR(30));
+
+CREATE TABLE vb_auther (
+    id INT(9) PRIMARY KEY AUTO_INCREMENT,
+    auther VARCHAR(60),
+    detail VARCHAR(200));
+
+
+CREATE TABLE vb_publisher (
+    id INT(9) PRIMARY KEY AUTO_INCREMENT,
+    publisher VARCHAR(60));
+
+CREATE TABLE vb_books (
+    book_id INT(9) PRIMARY KEY AUTO_INCREMENT,
+    book_name VARCHAR(60),
+    category1_id INT(9),
+    category2_id INT(9),
+    keywords VARCHAR(100),
+    auther_id INT(9),
+    publisher_id INT(9),
+    language VARCHAR(30),
+    edtion VARCHAR(30),
+    isbn VARCHAR(30),
+    book_price DOUBLE(9,2),
+    book_summary VARCHAR(500),
+    book_descrip VARCHAR(900),
+    book_img1 VARCHAR(60),
+    book_img2 VARCHAR(60),
+    book_img3 VARCHAR(60),
+    book_img4 VARCHAR(60),
+    FOREIGN KEY (category1_id) REFERENCES vb_category(id),
+    FOREIGN KEY (category2_id) REFERENCES vb_category(id),
+    FOREIGN KEY (auther_id) REFERENCES vb_auther(id),
+    FOREIGN KEY (publisher_id) REFERENCES vb_publisher(id));
+
+CREATE TABLE vb_orders (
+    order_id INT(9) PRIMARY KEY AUTO_INCREMENT,
+    order_num VARCHAR(30),
+    user_id INT(9),
+    order_status VARCHAR(10),
+    create_date DATETIME,
+    payment_date DATETIME,
+    ship_date DATETIME,
+    order_tax DOUBLE(9,2),
+    order_price DOUBLE(9,2),
+    books_count INT(3),
+    address_id INT(9),
+    ship_fee DOUBLE(9,2),
+    paidoff BOOLEAN,
+    shipped BOOLEAN,
+    FOREIGN KEY (user_id) REFERENCES vb_users(user_id),
+    FOREIGN KEY (address_id) REFERENCES vb_address(address_id));
+
+CREATE TABLE vb_order_book (
+    id INT(9) PRIMARY KEY AUTO_INCREMENT,
+    order_id INT(9),
+    book_id INT(9),
+    book_name VARCHAR(60),
+    book_price DOUBLE(9,2),
+    book_count INT(3),
+    FOREIGN KEY (order_id) REFERENCES vb_orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES vb_books(book_id));
+
+CREATE TABLE vb_shoppingcart (
+    id INT(9) PRIMARY KEY AUTO_INCREMENT,
+    user_id INT(9),
+    book_id INT(9),
+    book_count INT(3),
+    book_price DOUBLE(9,2),
+    instock BOOLEAN,
+    FOREIGN KEY (user_id) REFERENCES vb_users(user_id),
+    FOREIGN KEY (book_id) REFERENCES vb_books(book_id));
+
+CREATE TABLE vb_browse_log (
+    id INT(9) PRIMARY KEY AUTO_INCREMENT,
+    user_id INT(9),
+    browse_date DATETIME,
+    book_id INT(9),
+    book_name VARCHAR(60),
+    FOREIGN KEY (user_id) REFERENCES vb_users(user_id),
+    FOREIGN KEY (book_id) REFERENCES vb_books(book_id));
+
+CREATE TABLE vb_news (
+    news_id INT(9) PRIMARY KEY AUTO_INCREMENT,
+    news_title VARCHAR(200),
+    publish_date  DATETIME,
+    auther VARCHAR(80),
+    news_content VARCHAR(200));
+
+```
+
 <h2 id="ui_screenshot"></h2>
 
 ## UI Screen Shot
@@ -328,12 +500,26 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 ![shoppingcart_empty.php](./images/screen_shot/shoppingcart_empty.png "Shopping Cart")
 
+- Search Books keyword="computer"
+
+![search_computer](./images/screen_shot/search_computer.png "Search computer")
+
+- Search Books keyword="inter"
+
+![search_computer](./images/screen_shot/search_inter.png "Search inter")
+
+- Search Books keyword="math"
+
+![search_math](./images/screen_shot/search_math.png "Search math")
+
+- Search Books No Result
+
+![search_no](./images/screen_shot/search_no.png "Search No Result")
+
 
 - About Me
 
 ![aboutme.php](./images/screen_shot/aboutme.php.png "About Me")
-
-
 
 - News Page
 
@@ -342,15 +528,15 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 
 - Management Home Page
 
-![admin/index.html](./images/screen_shot/admin_index.html.png "Management Index")
+![admin/index.php](./images/screen_shot/admin_index.php.png "Management Index")
 
 - Management Books Page
 
-![admin/admin.html](./images/screen_shot/admin_admin.html.png "Management Books")
+![admin/admin.php](./images/screen_shot/admin_admin.php.png "Management Books")
 
 - Management Setup Page
 
-![admin/setup.html](./images/screen_shot/admin_setup.html.png "Management Setup")
+![admin/setup.php](./images/screen_shot/admin_setup.php.png "Management Setup")
 
 <h2 id="update_record"></h2>
 
