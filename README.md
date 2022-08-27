@@ -3,6 +3,7 @@
 * [Outline of the project](#outline_the_project)
 * [Project Function Flow Chart](#function_flow)
 * [Web Page Prototype Design](#prototype_design)
+* [Object-Oriented Classes Design](#oo_design)
 * [Database Schema Design](#database_design)
 * [Update Record](#update_record)
 * [UI Screen Shot](#ui_screenshot)
@@ -71,15 +72,13 @@ tunnels:
 **Development IDE :** VS Code
 
 
-**Timeline**
+### Timeline
 
 - 2022 July 1	-	Website Architecture Design
 - 2022 July 9	-	Project plan, Screen shots, Web Pages
 - 2022 July 28	-	Final Project Web Site
 - 2022 August 16	-	PHP programming
 - 2022 August 26	-	Dynamic Website final version finish
-
----
 
 ### Website Development Features
 
@@ -119,8 +118,6 @@ tunnels:
 
 1. Pushed on github
 
-
----
 
 ### o Purpose 
 **why is it being developed?**
@@ -187,6 +184,7 @@ Student or learner will use this online bookstore system, users can take a look 
 
 
 
+
 <h2 id="prototype_design"></h2>
 
 ## Web Page Prototype Design
@@ -206,19 +204,93 @@ Student or learner will use this online bookstore system, users can take a look 
 VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs.google.com/presentation/d/1uJhvNx98-ONlrOhoG8lj7gNIeNytHrPPOF4XgNWCDcI/edit?usp=sharing "VaniBao Bookstore")
 
 
+
+
+<h2 id="oo_design"></h2>
+
+## Object-Oriented Classes Design
+
+### class Connection
+```
+class Connection{  
+    public $host = "localhost";  
+    public $user = "root";  
+    public $password = "";  
+    public $db_name = "vanibao";  
+    public $conn;  
+
+    public function __construct() {}  
+}
+```
+
+
+### class Signup extends Connection
+class Signup extends Connection {  
+    public function tosignup($username, $password, $confirmpassword, $email, $firstname, $lastname, $address) {}  
+}  
+
+
+### class Login extends Connection
+class Login extends Connection {  
+    public $id;  
+
+    public function tologin($usernameemail, $password) {}  
+
+    public function idUser() {}  
+}  
+
+
+### class Select extends Connection
+class Select extends Connection {  
+    public function selectUserById($id) {}  
+}  
+ 
+
+### class ShoppingCart extends Connection
+class ShoppingCart extends Connection {  
+    public function query() {}  
+  
+    public function rowsnum($result) {}  
+  
+    public function get($result) {}  
+}  
+
+
+### class Book extends Connection
+class Book extends Connection {  
+    public function get($book_id) {}  
+}  
+
+
+### class Search extends Connection
+class Search extends Connection {  
+    private $result;  
+    public $rowsnum;  
+  
+    public function query($keyword) {}  
+  
+    public function get() {}  
+}  
+
+
+
+
 <h2 id="database_design"></h2>
 
 ## Database Design Purpose
 
 **vb_users** is the user table, who browser log records in **vb_browse_log** table, **vb_orders** references user’s id from **vb_users** and address id from **vb_address** so that one user could have up to 3 addresses, **vb_order_book** table builds relationship between **vb_orders** and **vb_books** with **order_id** from **vb_orders** and **book_id** from **vb_books**. Then **vb_books** table store all the detail of books which references from **vb_category**, **vb_auther** and **vb_publisher**.
 
-## Database Tables Imported in phpMyAdmin
+### Database Tables Imported in phpMyAdmin
 ![phpMyAdmin](./images/database_phpMyAdmin.png "Database Tables phpMyAdmin")
 
-## Database ER Diagram
+
+
+### Database ER Diagram
 ![ER Diagram](./images/database_ER.png "Database ER Diagram")
 
-## Database Schema Design
+
+### Database Schema Design
 
 - User Table : vb_users
 
@@ -359,7 +431,7 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | news_content   | VARCHAR(200)  |            | news title      |
 
 
-## Database SQL Statements
+### Database SQL Statements
 
 ```
 CREATE TABLE vb_users (
