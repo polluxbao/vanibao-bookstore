@@ -473,12 +473,11 @@ CREATE TABLE vb_news (
 
 - Home Page
 
-![index.php](./images/screen_shot/index.php.png "Home Page")
+![img #border](./images/screen_shot/index.php.png "Home Page")
 
-- Home Page
+- Home Page Drop-down Menu achieved by CSS
 
 ![index.php](./images/screen_shot/index_menu.php.png "Menu Bar")
-
 
 - Book Detail
 
