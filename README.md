@@ -477,11 +477,11 @@ CREATE TABLE vb_news (
 
 - Home Page Drop-down Menu achieved by CSS
 
-[![index.php #border](./images/screen_shot/index_menu.php.png "Menu Bar")]
+![index.php #border](./images/screen_shot/index_menu.php.png "Menu Bar")
 
 - Book Detail
 
-[![book_detail.php](./images/screen_shot/book_detail.php.png "Book Detail")]()
+![book_detail.php](./images/screen_shot/book_detail.php.png "Book Detail")
 
 - Sign Up
 
