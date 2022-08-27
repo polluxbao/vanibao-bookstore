@@ -248,7 +248,7 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | book_price     | DOUBLE(9,2)  |            | book price      |
 | instock        | BOOLEAN      |            | available or not|
 
-- Users' browse log vb_browse_log
+- Uers browse log vb_browse_log
 
 | Field Name     | Type         | Constraint | Description     |
 |  :---          |  :---        | :---:      |    :---         |
@@ -258,7 +258,7 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 | book_id        | INT          |  FK        | book's ID       |
 | book_name      | VARCHAR(60)  |            | book's name     |
 
-
+ 
 - vb_category
 
 | Field Name     | Type         | Constraint | Description     |
@@ -350,6 +350,8 @@ VaniBao Bookstore Web Page Prototype Design link: [Google Document](https://docs
 |          | Create | Database Tables    | 2022-07-13 |
 | 01.01.00 | Create | UI CSS renew       | 2022-07-30 |
 | 01.02.00 | Create | PHP Register/Login | 2022-08-15 |
+| 01.03.00 | Create | PHP query          | 2022-08-23 |
+| 01.04.00 | Create | PHP SESSION        | 2022-08-27 |
 
 ---
 Copyright AI_Bao

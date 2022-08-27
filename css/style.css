@@ -2,17 +2,29 @@
 * {box-sizing: border-box}
 
 body {font-family: Verdana, sans-serif; margin:0}
+
 header { height: 70px; background-color: #ed2e31; color: white;}
 header img {position: relative; float: left; padding-left: 10px;}
 header .menu { float: left; padding-top: 40px;}
 header .menu li{display: inline; float: left; 
   font-size: 14px; margin-right: 0px;color: white}
 
+
 header .menu a{display: block; color: white; text-decoration: none;
   padding: 4px 15px}
 
-header .login a{float: right; display: block; color: white; text-decoration: none;
-    padding: 4px 15px}
+header .login a {float: right; display: block; color: white; text-decoration: none;
+    padding: 5px 15px}
+
+header .login p {float: right; display: block; color: white; text-decoration: none;
+    padding: 5px 15px}
+
+header .login a:hover {color:yellow}
+
+header .login p:hover {color:yellow}
+
+header .cart {position: absolute; right: 50px; top:30px; }
+header .cart img {height: 36px;}
 
 label.labelblock input {position: relative;}
 #username, #password {width: 15em;}
@@ -40,3 +52,67 @@ form span {color:red;}
   border-bottom: none;
 }
 
+.menu ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+}
+
+.menu ul li a:hover {
+  color: yellow;
+}
+
+.menu ul li a {
+  display: block;
+}
+
+.menu ul li ul {
+  position: absolute;
+  z-index: 999;
+  background-color: #ed2e31;
+  padding: 5px;
+  border-radius: 0px 0px 6px 6px;
+}
+ 
+.menu ul li ul {
+  display: none;
+}
+
+.menu ul li:hover ul {
+  display: block;
+}
+
+.menu ul li ul li {
+  width: 110px;
+}
+
+.menu ul li ul li a {
+  padding: 8px 14px;
+}
+
+.menu ul li ul li a:hover {
+  background-color: FireBrick;
+}
+
+
+#caption ul {
+  list-style-type: none; 
+  padding: 0px; 
+  margin: 0px}
+
+#caption li {
+  display: inline; 
+  float: left; 
+  font-size: 14px; 
+  margin-right: 0px;
+  background: url(../img/btn_right.png) no-repeat 100% 50%; 
+  color: white}
+
+#caption a {
+  display: block; 
+  color: white; 
+  text-decoration: none;
+  background: url(../img/btn_left.png) no-repeat 0% 100%; 
+  padding: 4px 15px}
+
+#caption a:hover {color: red}
